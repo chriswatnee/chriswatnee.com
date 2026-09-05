@@ -36,12 +36,11 @@ header h1 {
   gap: 24px;
 }
 
-.photos > div {
-  min-width: 0;
-  aspect-ratio: 1 / 1;
-  display: grid;
-  place-items: center;
-  background: #ddd;
+.photos img {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
 }
 
 @media (max-width: 600px) {
