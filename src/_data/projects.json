@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Todos",
+    "url": "https://todos.chriswatnee.com",
+    "description": "A to-do list that looks and feels like a late-80s adventure game, with EGA colors, beveled buttons and a text-parser prompt. It works with your Todoist tasks using the same commands as Todoist's <code>td</code> command-line tool, and clicking a button types the command out for you so you learn them as you go.",
+    "stack": "Vanilla JS, Vite, Todoist API, Cloudflare",
+    "source": "https://github.com/chriswatnee/todos"
+  },
+  {
+    "name": "Status Rodeo",
+    "url": "https://status.rodeo",
+    "description": "Short statuses from a small herd of friends. It started as a way to post a status and show the latest one on this site, and grew into a tiny social network with profiles, link previews, hat tips and RSS feeds.",
+    "stack": "Vanilla JS, Vite, Supabase, Cloudflare Pages",
+    "source": "https://github.com/chriswatnee/status-rodeo"
+  }
+]

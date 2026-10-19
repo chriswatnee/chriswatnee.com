@@ -1,15 +1,18 @@
 {
   "name": "chriswatnee.com",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
+  "private": true,
+  "description": "Chris Watnee's personal site, built with Eleventy.",
+  "author": "Chris Watnee",
   "license": "ISC",
   "type": "commonjs",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6"
   }

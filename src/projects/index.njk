@@ -1,46 +1,21 @@
 ---
 layout: layouts/base.njk
-title: Projects — Chris Watnee
+title: Projects
+description: Projects Chris Watnee has built, including Todos and Status Rodeo.
 ---
-
-<header class="site-header">
-  <h1><a href="/">Chris Watnee</a></h1>
-  <nav>
-    <span class="current-page" aria-current="page">Projects</span>
-    <a href="/photos/">Photos</a>
-    <a href="https://github.com/chriswatnee">GitHub</a>
-  </nav>
-</header>
 
 <h2 class="page-title">Projects</h2>
 
 <ul class="projects">
+  {%- for project in projects %}
   <li class="project">
-    <h3 class="project-name"><a href="https://todos.chriswatnee.com">Todos</a></h3>
-    <p class="project-description">
-      A to-do list that looks and feels like a late-80s adventure game, with EGA
-      colors, beveled buttons and a text-parser prompt. It works with your
-      Todoist tasks using the same commands as Todoist's <code>td</code>
-      command-line tool, and clicking a button types the command out for you so
-      you learn them as you go.
-    </p>
+    <h3 class="project-name"><a href="{{ project.url }}">{{ project.name }}</a></h3>
+    <p class="project-description">{{ project.description | safe }}</p>
     <p class="project-meta">
-      <span>Vanilla JS, Vite, Todoist API, Cloudflare</span>
+      <span>{{ project.stack }}</span>
       <span>·</span>
-      <a href="https://github.com/chriswatnee/todos">Source</a>
+      <a href="{{ project.source }}">Source</a>
     </p>
   </li>
-  <li class="project">
-    <h3 class="project-name"><a href="https://status.rodeo">Status Rodeo</a></h3>
-    <p class="project-description">
-      Short statuses from a small herd of friends. It started as a way to post a
-      status and show the latest one on this site, and grew into a tiny social
-      network with profiles, link previews, hat tips and RSS feeds.
-    </p>
-    <p class="project-meta">
-      <span>Vanilla JS, Vite, Supabase, Cloudflare Pages</span>
-      <span>·</span>
-      <a href="https://github.com/chriswatnee/status-rodeo">Source</a>
-    </p>
-  </li>
+  {%- endfor %}
 </ul>
