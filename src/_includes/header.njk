@@ -1,0 +1,13 @@
+<header class="site-header">
+  <h1><a href="/">{{ site.title }}</a></h1>
+  <nav>
+    {%- for item in nav %}
+    {%- if page.url == item.url %}
+    <span class="current-page" aria-current="page">{{ item.label }}</span>
+    {%- else %}
+    <a href="{{ item.url }}">{{ item.label }}</a>
+    {%- endif %}
+    {%- endfor %}
+    <a href="https://github.com/chriswatnee">GitHub</a>
+  </nav>
+</header>
